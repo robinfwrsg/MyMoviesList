@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #e9ddce;
+    --text-color: #2c2c2c;
+    --button-bg: #2c2c2c;
+    --button-text: #ffffff;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 20px rgba(0,0,0,0.08);
+    --hover-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    --border-radius: 16px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --success-color: #10b981;
+    --error-color: #ef4444;
+    --warning-color: #f59e0b;
+    --dark-bg: #1a1a1a;
+    --dark-card-bg: #2d2d2d;
+    --dark-text: #e9ecef;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+body.dark-mode {
+    --bg-color: var(--dark-bg);
+    --card-bg: var(--dark-card-bg);
+    --text-color: var(--dark-text);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background-color: var(--bg-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(44, 44, 44, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.logo-icon {
+    background: var(--button-bg);
+    color: var(--button-text);
+    padding: 0.5rem;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+.nav-link:hover {
+    background: rgba(44, 44, 44, 0.1);
+}
+
+.nav-link.active {
+    background: rgba(44, 44, 44, 0.2);
+    font-weight: 600;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.welcome-text {
+    font-weight: 500;
+}
+
+.logout-btn {
+    background: var(--error-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.logout-btn:hover {
+    background: #dc2626;
+}
+
+/* Auth Section */
+.auth-section {
+    max-width: 500px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.auth-container {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.auth-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid rgba(44, 44, 44, 0.1);
+}
+
+.tab {
+    flex: 1;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+}
+
+.tab:hover {
+    background: rgba(44, 44, 44, 0.1);
+}
+
+.tab.active {
+    background: rgba(44, 44, 44, 0.2);
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.auth-form h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 500;
+}
+
+.form-group input {
+    padding: 0.75rem;
+    border: 2px solid #e5e5e5;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.form-group input:invalid:focus {
+    border-color: var(--error-color);
+}
+
+.auth-btn {
+    background: var(--button-bg);
+    color: var(--button-text);
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.auth-btn:hover {
+    background: #1a1a1a;
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--bg-color);
+    color: var(--text-color);
+    border-top: 1px solid rgba(44, 44, 44, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .auth-section {
+        padding: 0 1rem;
+        margin: 2rem auto;
+    }
+
+    .auth-container {
+        padding: 1.5rem;
+    }
+}

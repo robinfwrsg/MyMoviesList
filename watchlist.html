@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyMoviesList - Watchlist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="watchlist.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">MML</span>
+            MyMoviesList
+        </a>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="search.html" class="nav-link">Search</a>
+            <a href="watchlist.html" class="nav-link active">Watchlist</a>
+            <a href="watched.html" class="nav-link">Watched</a>
+            <div id="authSection"></div>
+            <button id="themeToggle" class="nav-link">Toggle Theme</button>
+        </nav>
+    </header>
+
+    <!-- Auth Required Message -->
+    <div id="authMessage" class="auth-message" style="display: none;">
+        Please <a href="login.html">sign in</a> to view your watchlist.
+    </div>
+
+    <!-- Watchlist Section -->
+    <section class="movies-section" id="watchlist">
+        <div class="section-header">
+            <h2 class="section-title">Your Watchlist</h2>
+            <p class="section-subtitle">Movies you want to watch</p>
+        </div>
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            Loading your watchlist...
+        </div>
+        <div class="movies-grid" id="moviesGrid"></div>
+    </section>
+
+    <!-- Movie Details Modal -->
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2 id="detailsMovieTitle"></h2>
+            <img id="detailsPoster" class="movie-poster" alt="Movie Poster">
+            <p id="detailsYear"></p>
+            <p id="detailsOverview"></p>
+            <button class="action-btn watchlist-btn" onclick="removeFromWatchlist()">Remove from Watchlist</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 MyMoviesList. All rights reserved.</p>
+    </footer>
+
+    <script src="watchlist.js"></script>
+</body>
+</html>

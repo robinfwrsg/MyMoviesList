@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyMoviesList - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="header">
+    <a href="index.html" class="logo">
+        <span class="logo-icon">MML</span>
+        MyMoviesList
+    </a>
+    <nav class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="search.html" class="nav-link">Search</a>
+        <a href="watchlist.html" class="nav-link">Watchlist</a>
+        <a href="watched.html" class="nav-link">Watched</a>
+        <div id="authSection"></div>
+        <button id="themeToggle" class="nav-link">Toggle Theme</button>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">⋮</div>
+</header>
+
+    <!-- Auth Required Message -->
+    <div id="authMessage" class="auth-message" style="display: none;">
+        Please <a href="login.html">sign in</a> to add movies to your watchlist and track watched movies.
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <div class="search-bar">
+            <input type="text" class="search-input" id="searchInput" placeholder="Search for movies..." required>
+            <button class="search-btn" onclick="performSearch()">Search</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>MyMoviesList</h1>
+            <p>Discover, rate, and share your favorite movies with a community of film enthusiasts.</p>
+            <button class="cta-button" onclick="scrollToMovies()">Explore</button>
+        </div>
+        <div class="hero-visual">
+            <div class="camera-mockup">
+                <div class="camera-lens"></div>
+            </div>
+            <div class="preview-posters" id="previewPosters"></div>
+        </div>
+    </section>
+
+    <!-- Movies Section -->
+    <section class="movies-section" id="movies">
+        <div class="section-header">
+            <h2 class="section-title">Popular Movies</h2>
+            <p class="section-subtitle">Discover what everyone's watching</p>
+        </div>
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            Loading amazing movies...
+        </div>
+        <div class="movies-grid" id="moviesGrid"></div>
+    </section>
+
+    <!-- Rating Modal -->
+    <div id="ratingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Rate this Movie</h2>
+            <div id="ratingMovieTitle"></div>
+            <div class="rating-input">
+                <label for="movieRating">Your Rating (1–10):</label>
+                <div class="star-rating" id="starRating">
+                    <span class="star" data-value="1">★</span>
+                    <span class="star" data-value="2">★</span>
+                    <span class="star" data-value="3">★</span>
+                    <span class="star" data-value="4">★</span>
+                    <span class="star" data-value="5">★</span>
+                    <span class="star" data-value="6">★</span>
+                    <span class="star" data-value="7">★</span>
+                    <span class="star" data-value="8">★</span>
+                    <span class="star" data-value="9">★</span>
+                    <span class="star" data-value="10">★</span>
+                </div>
+                <input type="hidden" id="movieRating" value="">
+            </div>
+            <button class="rating-submit" onclick="submitRating()">Submit Rating</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 MyMoviesList. All rights reserved.</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
