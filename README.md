@@ -1,63 +1,43 @@
-#MyMoviesList:
+# MyMoviesList
 
+Welcome to **MyMoviesList**, a simple and fun web app where you can discover, rate, and track your favorite movies. Built with HTML, CSS, and JavaScript, this project lets you manage a watchlist, mark movies as watched, rate them, and leave reviews.
 
-Welcome to MyMoviesList, a simple and fun web app where you can discover, rate, and track your favorite movies.
-Built with HTML, CSS, and JavaScript, this project lets you manage a watchlist, mark movies as watched, and even rate the movies and leave reviews.
+## Features
 
-##Features include:
+- Browse popular movies  
+- Add movies to your watchlist or mark them as watched  
+- Rate movies (1–10) and write optional reviews  
+- Responsive design for mobile and desktop  
+- Dark mode toggle for a personalized experience  
 
+## Prerequisites
 
-Browse popular movies.
+- A modern web browser (Chrome, Firefox, Edge, etc.)  
+- Internet connection (to fetch movie data from the TMDB API)  
 
-Add movies to your watchlist or mark them as watched.
+## Deployed Version
 
-Rate movies (1-10) and write optional reviews.
+Check out the live site here:  
+[https://robinfwrsg.github.io/MyMoviesList/index.html](https://robinfwrsg.github.io/MyMoviesList/index.html)
 
-Responsive design for mobile and desktop.
+## Usage
 
-Dark mode toggle for a personalized experience.
+- Sign in (local storage-based) to save your watchlist and watched movies  
+- Use the search bar to find movies or browse popular ones on the home page  
+- Click "Mark Watched" to rate and review a movie directly  
 
-##Prerequisites:
+## Technologies Used
 
+- **HTML5** – Structure of the app  
+- **CSS3** – Styling and responsiveness  
+- **JavaScript** – Dynamic functionality and API integration  
+- **TMDB API** – Powers movie data  
 
-A modern web browser (Chrome, Firefox, Edge, etc.).
+## Acknowledgments
 
-Internet connection (to fetch movie data from the TMDB API).
+- Thanks to the [TMDB API](https://www.themoviedb.org/) for providing movie data
 
-Deployed Version
-
-
-#Check out the live site here: https://robinfwrsg.github.io/MyMoviesList/index.html
-
-##Usage:
-
-
-Sign in (local storage-based) to save your watchlist and watched movies.
-
-Use the search bar to find movies or browse popular ones on the home page.
-
-Click "Mark Watched" to rate and review a movie directly.
-
-##Technologies Used:
-
-
-HTML5: Structure of the app.
-
-CSS3: Styling and responsiveness.
-
-JavaScript: Dynamic functionality and API integration.
-
-TMDB API: Powers movie data.
-
-Feel free to fork this repo, make improvements, and submit a pull request.
-
-##Acknowledgments:
-
-
-Thanks to the TMDB API for providing movie data.
-
-##Screenshots: 
-
+## Screenshots
 
 ![image](https://github.com/user-attachments/assets/c4457f9c-bde8-4c91-b3d2-9be06e7daddb)
 ![image](https://github.com/user-attachments/assets/c9906d47-757d-448e-8727-ff3a1ff7d09d)
